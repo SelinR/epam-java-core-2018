@@ -2,7 +2,11 @@ package com.epam.task06.threads;
 
 import static com.epam.task06.threads.ATMFunctional.*;
 
-public class ATMRunnable implements Runnable {
+/**
+ * This class is responsible for running ATM thread.
+ * @author Selin Roman
+ */
+class ATMRunnable implements Runnable {
     
     @Override
     public void run() {
@@ -16,6 +20,9 @@ public class ATMRunnable implements Runnable {
         }
     }
     
+    /**
+     * Simple method used to slow down threads a bit.
+     */
     private void goToSleep() {
         try {
             Thread.sleep(1000);
